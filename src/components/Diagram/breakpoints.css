@@ -1,0 +1,35 @@
+
+
+.container {
+  height: 98vh;
+  
+}
+
+
+
+
+@media screen and (orientation:portrait) {
+  .container {
+    height: 98vh;
+    
+  }
+}
+
+@media screen and (orientation:landscape) {
+  .container {
+    height: 98vh;
+    
+  }
+  
+
+}
+
+
+
+
+/* .sectionOne {
+  height: 85vh;
+}
+.sectionTwo {
+  height: 15vh;
+} */
