@@ -12,8 +12,8 @@ class SvgJsonContainer extends React.Component {
 
   }
 
-blur = () => {
-	 this.setState({ globalFocus: "unFocus"});
+  blur = () => {
+        this.setState({ globalFocus: "unFocus"});
 }
 
 unblur = () => {
