@@ -31,7 +31,7 @@ class Svg extends React.Component {
 
 	{this.props.groups.map((g, i) => {
 	    return (
-		    <GroupContainer fill={g.attributes.fill} filter={this.props.filter} childTriggerState={this.props.childTriggerState} thisGroup={g} key={i} id={g.attributes.id} display={g.attributes.display}/>
+		    <GroupContainer fill={g.attributes.fill} filter={this.props.filter} blur={this.props.blur} unblur={this.props.unblur} thisGroup={g} key={i} id={g.attributes.id} display={g.attributes.display}/>
 		    
 	    )})}
     </svg>

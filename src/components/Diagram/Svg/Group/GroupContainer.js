@@ -20,14 +20,14 @@ class GroupContainer extends React.Component {
 	 fillOpacityState: 1,
 	 active: 1
      });
-     this.props.childTriggerState()
+     this.props.blur()
 
     };
 
  hide = () => {
 	
      this.setState({fillOpacityState: 0});
-     this.props.childTriggerState()
+     this.props.unblur()
     };
 
      
