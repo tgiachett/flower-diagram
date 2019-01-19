@@ -3,12 +3,9 @@ import GroupContainer from './Group/GroupContainer';
 
 class Svg extends React.Component {
 
-
-    
-    
     render() {
 
-	const unFocusId = "unFocus"
+    
     return (
 
     <svg
@@ -21,7 +18,7 @@ class Svg extends React.Component {
     preserveAspectRatio={this.props.preserveAspectRatio}
     version="1.1">
 
-	    <filter id={unFocusId}>
+	    <filter id="unFocus">
     <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
 	    </filter>
 	    <filter id="noFilter">
