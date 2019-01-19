@@ -175,7 +175,7 @@
         "id": "petals",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#0ff"
+        "fill": "#FFA500"
       },
       "children": [
         {
@@ -609,7 +609,7 @@
         "id": "leaves",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#0ff"
+        "fill": "#FFA500"
       },
       "children": [
         {
@@ -688,7 +688,7 @@
         "id": "anther",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#0ff",
+        "fill": "#FFA500",
         "stroke-width": "1"
       },
       "children": [
@@ -762,7 +762,7 @@
         "id": "filament",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#0ff"
+        "fill": "#FFA500"
       },
       "children": [
         {
@@ -896,7 +896,7 @@
         "id": "peduncle",
         "display": "inline",
         "fill-opacity": "0",
-        "fill": "#0ff"
+        "fill": "#FFA500"
       },
       "children": [
         {
@@ -964,7 +964,7 @@
         "id": "stigma",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#0ff"
+        "fill": "#FFA500"
       },
       "children": [
         {

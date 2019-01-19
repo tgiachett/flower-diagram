@@ -22,7 +22,22 @@ class SvgJsonContainer extends React.Component {
 
 // componentDidMount() {
   
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+	globalFocus: "noFilter"
+    }
+
+     
   
+  }
+
+     triggerFocusToggle = () => {
+	 if (this.state.globalFocus !== "unFocus") {
+	     this.setState({ globalFocus: "unFocus"})} else {
+		 this.setState({ globalFocus: "noFilter"})}
+     }
 
     
 
@@ -43,6 +58,8 @@ class SvgJsonContainer extends React.Component {
       pathStyleState={this.state}
       style={this.props.style}
       preserveAspectRatio={this.props.preserveAspectRatio}
+	childTriggerState={this.triggerFocusToggle}
+	filter={this.state.globalFocus}
       
     >
     </Svg> 

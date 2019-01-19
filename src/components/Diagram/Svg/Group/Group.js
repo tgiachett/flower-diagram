@@ -9,7 +9,7 @@ class Group extends React.Component {
 
     return (
 
-	    <g key={this.props.key} id={this.props.id} display={this.props.display} fillOpacity={this.props.fillOpacity} onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave}>
+	    <g fill={this.props.fill} i={this.props.key} id={this.props.id} style={{filter:`url(#${this.props.filter})`}} display={this.props.display} fillOpacity={this.props.fillOpacity} onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave}>
 
 	{this.props.thisGroup.children.map((p, pi) => {
 			return (
