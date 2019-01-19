@@ -15,8 +15,6 @@ class GroupContainer extends React.Component {
  }
 
 
-
-    
  reveal = () => {
   if (this.props.thisGroup.attributes.id !== "Gold Rayed Lily of Japan") {
      this.setState({

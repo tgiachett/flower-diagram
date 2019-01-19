@@ -8,16 +8,16 @@ class SvgJsonContainer extends React.Component {
     this.state = {
       
 	globalFocus: "noFilter"
-    }
+    };
 
   }
 
-     blur = () => {
-	     this.setState({ globalFocus: "unFocus"})
+blur = () => {
+	 this.setState({ globalFocus: "unFocus"});
 }
 
 unblur = () => {
-    this.setState({globalFocus: "noFilter"})
+    this.setState({globalFocus: "noFilter"});
 }
  
   render() {
@@ -39,10 +39,11 @@ unblur = () => {
       blur={this.blur}
       unblur={this.unblur}
       filter={this.state.globalFocus}
+      externalHighlightTriggerState={this.props.externalHighlightTriggerState}
       />
      
 
-    )}
+    );}
 
   }
 

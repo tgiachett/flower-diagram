@@ -16,7 +16,7 @@
       "type": "element",
       "value": "",
       "attributes": {
-        "id": "g65",
+        "id": "Gold Rayed Lily of Japan",
         "display": "inline"
       },
       "children": [
@@ -172,7 +172,7 @@
       "type": "element",
       "value": "",
       "attributes": {
-        "id": "petals",
+        "id": "Petals",
         "fill-opacity": "0",
         "display": "inline",
         "fill": "#FFA500"
@@ -606,7 +606,7 @@
       "type": "element",
       "value": "",
       "attributes": {
-        "id": "leaves",
+        "id": "Leaves",
         "fill-opacity": "0",
         "display": "inline",
         "fill": "#FFA500"
@@ -685,7 +685,7 @@
       "type": "element",
       "value": "",
       "attributes": {
-        "id": "anther",
+        "id": "Anther",
         "fill-opacity": "0",
         "display": "inline",
         "fill": "#FFA500",
@@ -759,7 +759,7 @@
       "type": "element",
       "value": "",
       "attributes": {
-        "id": "filament",
+        "id": "Filament",
         "fill-opacity": "0",
         "display": "inline",
         "fill": "#FFA500"
@@ -893,7 +893,7 @@
       "type": "element",
       "value": "",
       "attributes": {
-        "id": "peduncle",
+        "id": "Peduncle",
         "display": "inline",
         "fill-opacity": "0",
         "fill": "#FFA500"
@@ -961,7 +961,7 @@
       "type": "element",
       "value": "",
       "attributes": {
-        "id": "stigma",
+        "id": "Sigma",
         "fill-opacity": "0",
         "display": "inline",
         "fill": "#FFA500"

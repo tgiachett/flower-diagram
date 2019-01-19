@@ -37,12 +37,13 @@ class Svg extends React.Component {
 		key={i}
 		id={g.attributes.id}
 		display={g.attributes.display}
+                externalHighlightTriggerState={this.props.externalHighlightTriggerState}
 		/>
 		    
-	    )})}
+	    );})}
     </svg>
 
-    )}
+    );}
 }
 
 	
