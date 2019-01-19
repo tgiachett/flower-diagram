@@ -3,19 +3,6 @@ import React from 'react';
 class Group extends React.Component {  
 
 
-
-
-    componentDidUpdate(prevProps, prevState) {
-  // only update chart if the data has changed
-        if (prevProps.externalHighlightTriggerState !== this.props.externalHighlightTriggerState) {
-            if (this.props.externalHighlightTriggerState === this.props.id ) {
-                this.props.triggerReveal();
-            } else {
-                this.props.triggerHide();
-            }
-    
-    }
-  }
     render() {
 
     return (

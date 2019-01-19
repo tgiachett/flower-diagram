@@ -27,21 +27,8 @@ class Diagram extends React.Component {
     
 render() {
   return (
-      <div className='container' style={{marginTop:'1vh'}}>
-        <div >
-          <SvgJsonContainer
-            className="imageContainer"
-            viewBox="0 0 1973 3200"
-            width="493"
-            height="800"
-            preserveAspectRatio="xMidYMid meet"
-            style={{display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
-            data={data}
-            externalHighlightTriggerState={this.state.externalHighlightTriggerState}
-          />
-          
-        </div>  
-      <div>
+      <div style={{ marginTop:'1vh'}}>
+        <div style={{float: 'left'}}>
         <ul>
           {data.children.filter(v => v.attributes.id !== 'Gold Rayed Lily of Japan').map((g, i) => {
               return (
@@ -60,6 +47,19 @@ render() {
           })}
         </ul>
       </div>
+        <div style={{float: 'left'}}>
+          <SvgJsonContainer
+            className="imageContainer"
+            viewBox="0 0 1973 3200"
+            width="493"
+            height="800"
+            preserveAspectRatio="xMidYMid meet"
+            style={{display: 'inline' }}
+            data={data}
+            externalHighlightTriggerState={this.state.externalHighlightTriggerState}
+          />
+          
+        </div>  
       </div>
     
   );

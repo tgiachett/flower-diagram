@@ -15,8 +15,6 @@ class GroupContainer extends React.Component {
  }
 
 
-
-    
  reveal = () => {
   if (this.props.thisGroup.attributes.id !== "Gold Rayed Lily of Japan") {
      this.setState({
@@ -38,6 +36,20 @@ class GroupContainer extends React.Component {
      }
     };
 
+
+    componentDidUpdate(prevProps, prevState) {
+  // only update chart if the data has changed
+        if (prevProps.externalHighlightTriggerState !== this.props.externalHighlightTriggerState) {
+            if (this.props.externalHighlightTriggerState === this.props.id ) {
+                this.reveal();
+            } else {
+                this.hide();
+            }
+    
+    }
+  }
+
+    
     // (this.props.externalHightlightState === 1) ? this.reveal() : this.hide()
 
 // componentDidUpdate() {
