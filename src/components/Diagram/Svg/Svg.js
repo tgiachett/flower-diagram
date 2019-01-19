@@ -26,12 +26,21 @@ class Svg extends React.Component {
 	    </filter>
 	    <filter id="noFilter">
     <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
-  </filter>
+	    </filter>
 
 
 	{this.props.groups.map((g, i) => {
 	    return (
-		    <GroupContainer fill={g.attributes.fill} filter={this.props.filter} blur={this.props.blur} unblur={this.props.unblur} thisGroup={g} key={i} id={g.attributes.id} display={g.attributes.display}/>
+		<GroupContainer
+		fill={g.attributes.fill}
+		filter={this.props.filter}
+		blur={this.props.blur}
+		unblur={this.props.unblur}
+		thisGroup={g}
+		key={i}
+		id={g.attributes.id}
+		display={g.attributes.display}
+		/>
 		    
 	    )})}
     </svg>
