@@ -27,8 +27,8 @@ class Diagram extends React.Component {
     
 render() {
   return (
-      <div style={{ marginTop:'1vh'}}>
-        <div style={{float: 'left'}}>
+      <div style={{ marginTop:'2vh'}}>
+        <div style={{marginRight: '1vh', float: 'left'}}>
         <ul>
           {data.children.filter(v => v.attributes.id !== 'Gold Rayed Lily of Japan').map((g, i) => {
               return (

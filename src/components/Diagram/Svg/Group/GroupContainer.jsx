@@ -8,7 +8,7 @@ class GroupContainer extends React.Component {
 	super(props);
      this.state = {
 	 fillOpacityState: 0,
-	 active: 0
+	 active: 0,
 
 		  };
 
@@ -20,6 +20,8 @@ class GroupContainer extends React.Component {
      this.setState({
 	 fillOpacityState: 1,
 	 active: 1
+         
+         
      });
      this.props.blur();
      }
@@ -38,16 +40,28 @@ class GroupContainer extends React.Component {
 
 
     componentDidUpdate(prevProps, prevState) {
-  // only update chart if the data has changed
+  // only run reveal/hide without onMouse if the state of the trigger changes
         if (prevProps.externalHighlightTriggerState !== this.props.externalHighlightTriggerState) {
-            if (this.props.externalHighlightTriggerState === this.props.id ) {
+
+            switch(this.props.externalHighlightTriggerState) {
+  case this.props.id:
                 this.reveal();
-            } else {
+    break;
+  case !this.props.id || '':
                 this.hide();
-            }
-    
+    break;
+  default:
+    // code block
+}
+            // if (this.props.externalHighlightTriggerState !== '') {
+            // if (this.props.externalHighlightTriggerState === this.props.id ) {
+            //     this.reveal();
+            // } else {
+            //     this.hide();
+            // }
+            // }
+        }
     }
-  }
 
     
     // (this.props.externalHightlightState === 1) ? this.reveal() : this.hide()
@@ -73,7 +87,7 @@ class GroupContainer extends React.Component {
         
 	<Group
 	fill={this.props.fill}
-	filter={(this.state.active === 1) ? 'noFilter' : this.props.filter}
+        filter={(this.state.active === 1) ? 'noFilter' : this.props.filter}
 	focus={this.state.active}
 	thisGroup={this.props.thisGroup}
         id={this.props.id}

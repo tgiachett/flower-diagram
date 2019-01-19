@@ -25,13 +25,13 @@ class Group extends React.Component {
 			    d={p.attributes.d}
 			    fill={p.attributes.fill}
 			    />
-			)})}
+			);})}
 			
 	</g>
 	    
     
 
-    )}
+    );}
 }
 
 	

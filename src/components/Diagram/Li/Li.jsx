@@ -32,9 +32,12 @@ render() {
   return (
         
       <li
-        style={{backgroundColor: this.state.backgroundColor}}
-        onMouseEnter={this.highlightTerm}
-        onMouseLeave={this.deHighlight}
+        style={{
+            backgroundColor: this.state.backgroundColor,
+            marginBottom: '1vh'
+               }}
+        onMouseOver={this.highlightTerm}
+        onMouseOut={this.deHighlight}
         id={this.props.id}
       >
         {this.props.id}  

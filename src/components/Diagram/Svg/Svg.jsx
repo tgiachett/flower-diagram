@@ -13,7 +13,6 @@ class Svg extends React.Component {
     viewBox={this.props.viewBox}
     width={this.props.width}
     height={this.props.height}
-    id={this.props.id}
     style={this.props.style}
     preserveAspectRatio={this.props.preserveAspectRatio}
     version="1.1">
