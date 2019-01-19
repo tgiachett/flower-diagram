@@ -1,4 +1,3 @@
-import "./breakpoints.css";
 import React from 'react';
 import SvgJsonContainer from './Svg/SvgJsonContainer';
 import Li from './Li/Li';
