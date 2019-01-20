@@ -14,8 +14,8 @@ class Group extends React.Component {
 	style={{filter:`url(#${this.props.filter})`}}
 	display={this.props.display}
 	fillOpacity={this.props.fillOpacity}
-	onMouseEnter={this.props.triggerReveal}
-	onMouseLeave={this.props.triggerHide}>
+	onMouseOver={this.props.onEvent}
+	onMouseOut={this.props.outEvent}>
 
 	{this.props.thisGroup.children.map((p, pi) => {
 			return (

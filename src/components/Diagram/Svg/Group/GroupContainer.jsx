@@ -15,19 +15,23 @@ class GroupContainer extends React.Component {
  }
 
 
- reveal = () => {
-  if (this.props.thisGroup.attributes.id !== "Gold Rayed Lily of Japan") {
+ reveal = (e) => {
+     
+     if (this.props.thisGroup.attributes.id !== "Gold Rayed Lily of Japan") {
      this.setState({
 	 fillOpacityState: 1,
 	 active: 1
          
          
      });
-     this.props.blur();
+      this.props.blur();
+       if (e !== undefined) {
+             this.props.passFocusIdUp(e);
+          }
      }
     };
 
- hide = () => {
+ hide = (e) => {
      // filter out the base image
      if (this.props.thisGroup.attributes.id !== "Gold Rayed Lily of Japan") {
      this.setState({
@@ -35,6 +39,11 @@ class GroupContainer extends React.Component {
          active: 0
      });
          this.props.unblur();
+         //skips passing foucus id up if the svg is not the source of the trigger
+          if (e !== undefined) {
+             this.props.passFocusIdUp(e, false);
+          }
+         
      }
     };
 
@@ -51,38 +60,17 @@ class GroupContainer extends React.Component {
                 this.hide();
     break;
   default:
-    // code block
+    
 }
-            // if (this.props.externalHighlightTriggerState !== '') {
-            // if (this.props.externalHighlightTriggerState === this.props.id ) {
-            //     this.reveal();
-            // } else {
-            //     this.hide();
-            // }
-            // }
+           
         }
     }
 
     
-    // (this.props.externalHightlightState === 1) ? this.reveal() : this.hide()
-
-// componentDidUpdate() {
-//   // Typical usage (don't forget to compare props):
-//     if (this.state.active === 0) {
-//       if (this.props.externalHighlightState === 1) {
-//           this.reveal(); }} else {
-//               this.hide(); }
-    //   }
-
+ 
  render() {
 
     return (
-
-        //external highlight trigger
-        // {if (this.props.externalHighlightTriggerState === 1) {
-        //     this.reveal();} else {
-        //         this.hide();
-        //     }}
 
         
 	<Group
@@ -92,10 +80,11 @@ class GroupContainer extends React.Component {
 	thisGroup={this.props.thisGroup}
         id={this.props.id}
 	display={this.props.display}
-	triggerHide={this.hide}
-	triggerReveal={this.reveal}
+	onEvent={this.reveal}
+        outEvent={this.hide}
 	fillOpacity={(this.props.thisGroup.attributes.id === "Gold Rayed Lily of Japan") ? 1 : this.state.fillOpacityState}
-        externalHighlightTriggerState={this.props.externalHighlightTriggerState}
+          externalHighlightTriggerState={this.props.externalHighlightTriggerState}
+          
         >
 			
 	</Group>

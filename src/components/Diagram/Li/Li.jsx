@@ -27,6 +27,25 @@ class Li extends React.Component {
             backgroundColor: "white"
         });
     }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log(prevProps.focusidelement !== this.props.focusidelement)
+        if (prevProps.focusidelement !== this.props.focusidelement) {
+             switch(this.props.focusidelement) {
+  case this.props.id:
+                 this.setState({
+            backgroundColor: "#FFA500"
+        });
+    break;
+  case !this.props.id || '':
+                this.setState({
+            backgroundColor: "white"
+        });
+    break;
+  default:
+        }
+        }
+    }
     
 render() {
   return (
@@ -39,6 +58,7 @@ render() {
         onMouseOver={this.highlightTerm}
         onMouseOut={this.deHighlight}
         id={this.props.id}
+        focusidelement={this.props.focusidelement}
       >
         {this.props.id}  
       </li>

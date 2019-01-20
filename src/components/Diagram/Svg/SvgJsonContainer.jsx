@@ -39,7 +39,8 @@ unblur = () => {
       blur={this.blur}
       unblur={this.unblur}
       filter={this.state.globalFocus}
-      externalHighlightTriggerState={this.props.externalHighlightTriggerState}
+        externalHighlightTriggerState={this.props.externalHighlightTriggerState}
+        passFocusIdUp={this.props.passFocusIdUp}
       />
      
 

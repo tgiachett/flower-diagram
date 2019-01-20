@@ -8,7 +8,8 @@ class Diagram extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            externalHighlightTriggerState: ''
+            externalHighlightTriggerState: '',
+            IdfromFocusElement: ''
         };
     }
 
@@ -23,7 +24,20 @@ class Diagram extends React.Component {
             externalHighlightTriggerState: ''
         });
     }
-    
+
+    passFocusIdUp = (e, a) => {
+        if (a !== false) {
+            this.setState({
+            IdfromFocusElement: e.target.parentNode.id
+        });
+        } else {
+            this.setState({
+            IdfromFocusElement: ''
+        });
+        }
+            
+        return a;
+    }
 render() {
   return (
       <div style={{ marginTop:'2vh'}}>
@@ -36,6 +50,7 @@ render() {
                     externalHighlightTriggerOn={this.externalHighlightTriggerOn}
                     externalHighlightTriggerOff={this.externalHighlightTriggerOff}
                     id={g.attributes.id}
+                    focusidelement={this.state.IdfromFocusElement}
                     
                   >
                     
@@ -56,6 +71,7 @@ render() {
             style={{display: 'inline' }}
             data={data}
             externalHighlightTriggerState={this.state.externalHighlightTriggerState}
+            passFocusIdUp={this.passFocusIdUp}
           />
           
         </div>  
