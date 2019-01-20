@@ -9,13 +9,19 @@ class Li extends React.Component {
         };
     }
 
+
+    changeColor = (color) => {
+        this.setState({
+            backgroundColor: color
+        });
+    }
+
+
     highlightTerm = (e) => {
         //trigger highlight 'On' up chain then down to flower component
         this.props.externalHighlightTriggerOn(e);
         //local color trigger
-        this.setState({
-            backgroundColor: "#FFA500"
-        });
+        this.changeColor("#EE82EE");
         
     };
 
@@ -23,24 +29,18 @@ class Li extends React.Component {
         //trigger highlight 'Off' up chain then down to flower component
         this.props.externalHighlightTriggerOff(e);
         //local color trigger off
-        this.setState({
-            backgroundColor: "white"
-        });
+       this.changeColor("White");
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log(prevProps.focusidelement !== this.props.focusidelement)
+       
         if (prevProps.focusidelement !== this.props.focusidelement) {
              switch(this.props.focusidelement) {
   case this.props.id:
-                 this.setState({
-            backgroundColor: "#FFA500"
-        });
+                 this.changeColor("#EE82EE");
     break;
   case !this.props.id || '':
-                this.setState({
-            backgroundColor: "white"
-        });
+             this.changeColor("White");
     break;
   default:
         }

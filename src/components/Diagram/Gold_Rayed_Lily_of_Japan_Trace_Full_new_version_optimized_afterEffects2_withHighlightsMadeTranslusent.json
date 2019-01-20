@@ -175,7 +175,7 @@
         "id": "Petals",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#FFA500"
+        "fill": "#EE82EE"
       },
       "children": [
         {
@@ -609,7 +609,7 @@
         "id": "Leaves",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#FFA500"
+        "fill": "#EE82EE"
       },
       "children": [
         {
@@ -688,7 +688,7 @@
         "id": "Anther",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#FFA500",
+        "fill": "#EE82EE",
         "stroke-width": "1"
       },
       "children": [
@@ -762,7 +762,7 @@
         "id": "Filament",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#FFA500"
+        "fill": "#EE82EE"
       },
       "children": [
         {
@@ -896,7 +896,7 @@
         "id": "Peduncle",
         "display": "inline",
         "fill-opacity": "0",
-        "fill": "#FFA500"
+        "fill": "#EE82EE"
       },
       "children": [
         {
@@ -964,7 +964,7 @@
         "id": "Sigma",
         "fill-opacity": "0",
         "display": "inline",
-        "fill": "#FFA500"
+        "fill": "#EE82EE"
       },
       "children": [
         {

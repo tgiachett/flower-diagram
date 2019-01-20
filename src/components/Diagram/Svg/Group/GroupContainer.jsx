@@ -14,8 +14,8 @@ class GroupContainer extends React.Component {
 
  }
 
-
- reveal = (e) => {
+// 
+ animate = (e) => {
      
      if (this.props.thisGroup.attributes.id !== "Gold Rayed Lily of Japan") {
      this.setState({
@@ -31,7 +31,7 @@ class GroupContainer extends React.Component {
      }
     };
 
- hide = (e) => {
+ reset = (e) => {
      // filter out the base image
      if (this.props.thisGroup.attributes.id !== "Gold Rayed Lily of Japan") {
      this.setState({
@@ -49,15 +49,15 @@ class GroupContainer extends React.Component {
 
 
     componentDidUpdate(prevProps, prevState) {
-  // only run reveal/hide without onMouse if the state of the trigger changes
+  // only run animate/reset without onMouse if the state of the trigger changes
         if (prevProps.externalHighlightTriggerState !== this.props.externalHighlightTriggerState) {
 
             switch(this.props.externalHighlightTriggerState) {
   case this.props.id:
-                this.reveal();
+                this.animate();
     break;
   case !this.props.id || '':
-                this.hide();
+                this.reset();
     break;
   default:
     
@@ -80,9 +80,9 @@ class GroupContainer extends React.Component {
 	thisGroup={this.props.thisGroup}
         id={this.props.id}
 	display={this.props.display}
-	onEvent={this.reveal}
-        outEvent={this.hide}
-	fillOpacity={(this.props.thisGroup.attributes.id === "Gold Rayed Lily of Japan") ? 1 : this.state.fillOpacityState}
+	onEvent={this.animate}
+        outEvent={this.reset}
+        fillOpacity={(this.props.thisGroup.attributes.id === "Gold Rayed Lily of Japan") ? 1 : this.state.fillOpacityState}
           externalHighlightTriggerState={this.props.externalHighlightTriggerState}
           
         >
