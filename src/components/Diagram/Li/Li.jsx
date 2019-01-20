@@ -53,7 +53,9 @@ render() {
       <li
         style={{
             backgroundColor: this.state.backgroundColor,
-            marginBottom: '1vh'
+            marginBottom: '1vh',
+            listStyleType: 'none'
+            
                }}
         onMouseOver={this.highlightTerm}
         onMouseOut={this.deHighlight}

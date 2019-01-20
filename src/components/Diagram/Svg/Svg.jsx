@@ -18,7 +18,7 @@ class Svg extends React.Component {
     version="1.1">
 
 	    <filter id="unFocus">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+    <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
 	    </filter>
 	    <filter id="noFilter">
     <feGaussianBlur in="SourceGraphic" stdDeviation="0" />

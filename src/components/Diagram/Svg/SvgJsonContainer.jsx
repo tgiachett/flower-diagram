@@ -11,11 +11,11 @@ class SvgJsonContainer extends React.Component {
     };
 
   }
-
+//triggers blur on elements that are not in focus
   blur = () => {
         this.setState({ globalFocus: "unFocus"});
 }
-
+// clears the blur state for all elements
 unblur = () => {
     this.setState({globalFocus: "noFilter"});
 }
