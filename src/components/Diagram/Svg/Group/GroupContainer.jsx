@@ -83,7 +83,7 @@ class GroupContainer extends React.Component {
 	onEvent={this.animate}
         outEvent={this.reset}
         fillOpacity={(this.props.thisGroup.attributes.id === "Gold Rayed Lily of Japan") ? 1 : this.state.fillOpacityState}
-          externalHighlightTriggerState={this.props.externalHighlightTriggerState}
+        externalHighlightTriggerState={this.props.externalHighlightTriggerState}
           
         >
 			
